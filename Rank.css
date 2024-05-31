@@ -1,0 +1,242 @@
+ /* Font Family - Fortnite  */
+@font-face { 
+    font-family: 'Fortnite'; 
+    src: url("font-family/fortnite.otf"); 
+}
+ body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    overflow-x: hidden;
+    position: absolute;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    position: absolute;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 1;
+    font-family: 'Fortnite', Arial, sans-serif;
+}
+
+header .left {
+    padding-left:150px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    animation: 1s FadeTop linear forwards;
+}
+
+header .right{
+    padding-left: 39rem;
+}
+
+header .left .divider {
+    display: block;
+    height: 30px;
+    width: 1px;
+    background: #fff;
+}
+
+header ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+header ul li {
+    margin: 0 12px;
+}
+
+header ul a {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-variant: small-caps;
+    text-decoration: none;
+    color: #ffffff;
+    animation: 1s FadeTop linear forwards;
+    position: relative;
+    padding: 5px 0;
+}
+
+header ul a::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #fffb1a;
+    transition: width 0.5s ease, left 0.5s ease;
+}
+
+header ul a:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+.Rank {
+    background-image: url('images/fortnite-ranked-1920x1080-377b54b2e207.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+
+}
+.content {
+    background: url(images/back-for-content.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+}
+
+.content h1, .content p {
+    padding-top: 40px;
+    margin: 0 0 10px;
+}
+
+.content h1 {
+    font-size: 4rem;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 0%;
+    padding: none;
+    font-family: 'fortnite', sans-serif;
+}
+
+.content p {
+    font-size: 1.4rem;
+    color: #ffffff;
+    position: absolute;
+    width: 50%;
+    justify-content: center;
+    margin-top: auto;
+    font-family: sans-serif;
+    text-align: justify;
+    padding: 75px;
+
+}
+
+.rank-images {
+    padding-right: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Space between images */
+    float: right;
+}
+
+.rank-images img {
+    max-width: 450px; /* Set a maximum width for images */
+    height: auto;
+    border-radius: 8px; /* Optional: Add rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a slight shadow to images */
+}
+
+.rank-images img {
+    max-width: 480px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rank-images img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Keyframes for fadeInUp animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Ensure the content and rank images animate on scroll */
+.content,
+.rank-images {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.content.visible,
+.rank-images.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Optional: keyframe for fading in */
+@keyframes FadeTop {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+footer{
+    position: relative;
+    bottom: 0;
+    background: #282626;
+    padding: 15px 23px;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icons {
+    margin-bottom: 1rem;
+}
+
+.social-icon {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #fffb1a; /* Change color on hover */
+}
+
+.footer p {
+    font-size: 1.2rem;
+    margin: 0;
+    font-family: 'fortnite';
+}
