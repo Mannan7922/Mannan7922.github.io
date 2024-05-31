@@ -1,0 +1,198 @@
+/* Font Family - Fortnite */
+@font-face {
+    font-family: 'Fortnite';
+    src: url("font-family/fortnite.otf");
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    overflow-x: hidden;
+    background-image: url(images/Dark-purple.jpg);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 1;
+    font-family: 'Fortnite', Arial, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    position: relative;
+}
+
+header .left {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+header .left .divider {
+    display: block;
+    height: 30px;
+    width: 1px;
+    background: #fff;
+}
+
+header ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+header ul li {
+    margin: 0 12px;
+}
+
+header ul a {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-variant: small-caps;
+    text-decoration: none;
+    color: #ffffff;
+    animation: fadeIn 1s ease-in-out forwards;
+    position: relative;
+    padding: 5px 0;
+}
+
+header ul a::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #fffb1a;
+    transition: width 0.5s ease, left 0.5s ease;
+}
+
+header ul a:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+.reviews-container {
+    width: 90%;
+    margin: 20px auto;
+    font-family: 'Fortnite', sans-serif;
+}
+
+.heading {
+    text-align: center;
+    margin: 40px 0px;
+    font-size: 36px;
+}
+
+.review-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 20px 0;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-10px);
+}
+
+.reviewer-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.reviewer-info i {
+    font-size: 40px;
+    color: #61dafb;
+}
+
+.reviewer-info h3 {
+    font-size: 20px;
+    margin: 0;
+    color: #555;
+}
+
+.rating {
+    display: flex;
+    gap: 5px;
+    margin-left: auto;
+}
+
+.rating i {
+    color: #ffbf00;
+    font-size: 18px;
+}
+
+.review-text {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Logo Animation */
+.logo {
+    animation: fadeIn 1s ease-in-out forwards;
+}
+.footer {
+    background-color: #282626;
+    color: #ffffff;
+    padding: 2rem 0;
+    text-align: center;
+    font-family: 'Fortnite', Arial, sans-serif;
+}
+
+.footer .container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-icons {
+    margin-bottom: 1rem;
+}
+
+.social-icon {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin: 0 0.5rem;
+}
+
+.social-icon:hover {
+    color: #fffb1a; /* Change color on hover */
+}
+
+.footer p {
+    font-size: 1.2rem;
+    margin: 0;
+}
