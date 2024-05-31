@@ -1,0 +1,249 @@
+/* Font Family - Fortnite */
+@font-face {
+    font-family: 'Fortnite';
+    src: url("font-family/fortnite.otf");
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    overflow-x: hidden;
+    background-image: url(images/galaxy.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 1;
+    font-family: 'Fortnite', Arial, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    position: relative;
+}
+
+header .left {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+header .left .divider {
+    display: block;
+    height: 30px;
+    width: 1px;
+    background: #fff;
+}
+
+header ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+header ul li {
+    margin: 0 12px;
+}
+
+header ul a {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-variant: small-caps;
+    text-decoration: none;
+    color: #ffffff;
+    animation: fadeIn 1s ease-in-out forwards;
+    position: relative;
+    padding: 5px 0;
+}
+
+header ul a::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #fffb1a;
+    transition: width 0.5s ease, left 0.5s ease;
+}
+
+header ul a:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+.logo {
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+
+
+h1 {
+    color: #ffffff;
+    margin-top: 20px;
+    text-align: center;
+    font-family: 'Fortnite', Arial, sans-serif;
+}
+
+.creators {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.creator {
+    background: rgba(0, 0, 0, 0.7); /* Added semi-transparent background */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 20px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.creator img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.creator h2 {
+    color: #fffb1a;
+    font-size: 20px;
+}
+
+.creator p {
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.creator {
+    position: relative; /* Ensure the overlay is positioned relative to the creator */
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* Maintain 16:9 aspect ratio (height / width * 100%) */
+}
+
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    display: none; /* Initially hidden */
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Show overlay on hover */
+.creator:hover .overlay {
+    display: flex;
+}
+
+/* Scale up thumbnail on hover */
+.creator img {
+    max-width: 100%;
+    border-radius: 5px;
+    transition: transform 0.3s ease; /* Adding transition for smooth effect */
+}
+
+.creator img:hover {
+    transform: scale(1.1); /* Increasing size on hover */
+}
+.creator .play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3em;
+    color: rgb(115, 113, 195);
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Adding transition for smooth effect */
+}
+
+.creator:hover .play-icon {
+    opacity: 1; /* Show play icon on hover */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.creators {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    animation: fadeIn 5s ease; /* Apply the fadeIn animation to the creators section */
+}
+.footer {
+    background-color: #282626;
+    color: #ffffff;
+    padding: 2rem 0;
+    text-align: center;
+    font-family: 'Fortnite', Arial, sans-serif;
+}
+
+.footer .container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-icons {
+    margin-bottom: 1rem;
+}
+
+.social-icon {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin: 0 0.5rem;
+}
+
+.social-icon:hover {
+    color: #fffb1a; /* Change color on hover */
+}
+
+.footer p {
+    font-size: 1.2rem;
+    margin: 0;
+}
